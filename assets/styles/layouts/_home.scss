@@ -1,0 +1,132 @@
+.home-layout {
+    
+    &__intro {
+        position: relative;
+        margin-bottom: 75px;
+        .image {
+            min-height: 100vh;
+            background-position: center;
+            background-attachment: fixed;
+            background-size: cover;
+            position: relative;
+            z-index: 0;
+        }
+
+        .button {
+            @include centerer;
+            z-index: 9;
+        }
+
+        svg {
+            position: absolute;
+            z-index: 9;
+            width: 29px;
+            bottom: 30px;
+            left: 0;
+            right: 0;
+            margin: auto;
+        }
+
+        @keyframes dash {
+            to {
+                stroke-dashoffset: 0;
+              }
+        }
+
+        #Fill-1 {
+            fill: $black;
+            stroke: $white;
+            stroke-dasharray: 200;
+            stroke-dashoffset: 200;
+            animation: dash 3s linear forwards;
+            stroke-width:2px;
+        }
+        #Fill-4 {
+            fill: $white;
+            transition: all 2s linear;
+            animation: up-and-down 2s linear infinite;
+        }
+        .h1 {
+            margin:0;
+        }
+    }
+
+    &__portfolio {
+        min-height: 100vh;
+        margin-bottom: 50px;
+        .cell {
+            overflow: hidden;
+            margin-bottom: 30px;
+            &:hover {
+                .category-img {
+                    transform: scale(1.25);
+                }
+                .image-link {
+                    &:before {
+                        opacity: .7;
+                    }
+                }
+            }
+        }
+        .content {
+            background: $white;
+            padding: 30px;
+            position: relative;
+            z-index: 1;
+        }
+        .title {
+            margin: 0;
+            line-height: 1;
+            a {
+                color: $site-header;
+                display: block;
+                &:hover {
+                    color: $soft-link;
+                }
+            }
+        }
+        span {
+            color: $soft-link;
+            display: block;
+            margin-bottom: 5px;
+        }
+        .image-link {
+            display: block;
+            overflow: hidden;
+            position: relative;
+            &:before {
+                background-color: $black;
+                content: '';
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                display: block;
+                z-index: 1;
+                opacity: 0;
+                transition: opacity .35s ease-out;
+            }
+        }
+        .category-img {
+            position: relative;
+            z-index: 0;
+            transition: transform .35s ease-out;
+        }
+    }
+
+    &__available {
+        background-position: center;
+        background-size: cover;
+        margin-bottom: 75px;
+        @include breakpoint(medium){
+            background-attachment: fixed;
+        }
+        .grid-x {
+            min-height: 100vh;
+        }
+        h2 {
+            color: $white;
+        }
+    }
+}

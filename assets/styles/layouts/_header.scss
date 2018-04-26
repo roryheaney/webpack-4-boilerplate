@@ -1,0 +1,78 @@
+.no-js {
+    @include breakpoint(small only) {
+        .top-bar {
+            display: none;
+        }
+    }
+
+    @include breakpoint(medium) {
+        .title-bar {
+            display: none;
+        }
+    }
+}
+
+.header {
+
+    &__title-bar {
+        @extend .title-bar;
+    }
+
+    &__title-bar-title {
+        @extend .title-bar-title;
+    }
+
+    &__top-bar {
+        @extend .top-bar;
+        background-color: transparent;
+        padding: 10px 0;
+        transition: padding .25s ease-out;
+        ul {
+            background-color: transparent;
+        }
+
+        &--less-padding {
+            padding: 0;
+        }
+    }
+
+    &__top-bar-left {
+        @extend .top-bar-left;
+    }
+
+    &__top-bar-right {
+        @extend .top-bar-right;
+    }
+
+    &__dropdown-menu {
+        @extend .menu;
+        @extend .dropdown;
+        a {
+            @extend %font-nav-bar;
+            color: $white;
+            &:hover {
+                color: $site-yellow;
+            }
+        }
+    }
+
+    &__menu {
+        a {
+            @extend %font-nav-bar;
+            color: $white;
+            font-weight: 700;
+            font-size: rem-calc(15);
+        }
+    }
+
+    &--main {
+        background-color: rgba($color: #000000, $alpha: .7);
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        z-index: 99;
+    }
+
+}

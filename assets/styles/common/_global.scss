@@ -1,0 +1,46 @@
+/*media examples*/
+.element {
+    // Only affects medium screens and larger
+    @include breakpoint(medium) {
+        // All CSS in here goes inside the media query
+    }
+}
+
+.element {
+    // Only affects medium screens and smaller
+    @include breakpoint(medium down) { }
+    // Only affects medium screens, not small or large
+    @include breakpoint(medium only) { }
+}
+
+.element {
+    // Converted to 20em
+    @include breakpoint(320px) { }
+    // Unitless values are assumed to be pixels
+    @include breakpoint(320) { }
+    // Converted to 40em
+    @include breakpoint(40rem) { }
+}
+
+.element {
+    @include breakpoint(landscape) {
+        // CSS for landscape-oriented devices only
+    }
+    @include breakpoint(retina) {
+        // CSS for high-resolution displays only
+    }
+}
+
+
+@media only screen and (min-width: 1350px) {}
+@media only screen and (max-width: 1350px) {}
+@media only screen and (min-width: 1350px) and (max-width: 1350px) {}
+
+body {
+    background-color: #f5f5f5;
+}
+
+a {
+    @include mainTransitions;
+}
+

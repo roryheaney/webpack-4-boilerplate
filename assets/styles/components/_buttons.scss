@@ -1,0 +1,26 @@
+.button {
+    @include mainTransitions;
+    text-transform: uppercase;
+    font-family: 'Lato', sans-serif;
+	font-weight: 700;
+    font-style: normal;
+    letter-spacing: 2px;
+    padding: 15px 20px;
+    @include breakpoint(large){
+        padding: 20px 35px;
+    }
+    &--default {
+        background-color: $black;
+        &:hover {
+            color: $black;
+            background-color: $white;
+        }
+    }
+
+    &--opacity {
+        opacity: .7;
+        &:hover {
+            opacity: 1;
+        }
+    }
+}

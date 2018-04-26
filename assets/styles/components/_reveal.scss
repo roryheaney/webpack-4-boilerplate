@@ -1,0 +1,54 @@
+.reveal-overlay {
+    /*background-color: rgba(179,191,182,.7);*/
+    /*overflow: auto;*/
+    /*position: absolute;*/
+    @include breakpoint(medium) {
+        /*position: absolute;*/
+    }
+    .reveal {
+        /*background: $baige;*/
+        text-align: center;
+        padding: 50px;
+        border:none;
+        outline: none;
+        
+        @include breakpoint(medium) {
+            width: 600px;
+            /*position: fixed;*/
+        }
+        @include breakpoint(small only) {
+
+        }
+        .close-button {
+            transition: color .45s ease-out;
+            right: 25px;
+            top: 20px;
+            font-size: 20px;
+            &:hover {
+                /*color:$white;*/
+            }
+        }
+        &.reveal-legal {
+            
+
+        }
+
+        h2 {
+        	
+        }
+    }
+
+    .gform_confirmation_message {
+        
+    }
+    h2 {
+
+    }
+
+    img {
+		
+    }
+    p {
+        
+    }
+}

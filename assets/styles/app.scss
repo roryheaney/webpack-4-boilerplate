@@ -1,0 +1,31 @@
+@import "common/variables";
+@import "settings/settings";
+
+@import "../../node_modules/foundation-sites/scss/foundation.scss";
+
+@include foundation-everything;
+
+@import '../../node_modules/font-awesome/scss/font-awesome';
+
+
+@import "common/mixins";
+@import "common/type";
+@import "common/global";
+
+@import "components/buttons";
+@import "components/comments";
+@import "components/reveal";
+@import "components/forms";
+@import "components/grid";
+@import "components/wp-classes";
+// @import "components/owl";
+@import "components/instagram-list";
+
+@import "layouts/header";
+@import "layouts/sidebar";
+@import "layouts/footer";
+@import "layouts/pages";
+@import "layouts/posts";
+@import "layouts/tinymce";
+
+@import "layouts/home";

@@ -27,8 +27,6 @@
 * prod: `npm run prod` : production asset building / minification / uglify (WEBPACK MODE PRODUCTION)
 
 
-```
-
 ## Get Started
 * make sure **NVM** is set to **8.9.4**
 * from the command line, run `npm install` in your working directory

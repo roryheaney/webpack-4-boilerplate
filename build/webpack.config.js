@@ -98,14 +98,18 @@ module.exports = {
         new ExtractTextPlugin(config.outputs.css),
         new CleanPlugin(config.paths.public, { root: config.paths.root }),
         // new StyleLintPlugin(),
-        new CopyPlugin([{
-            from: {
-                glob: `${config.paths.images}/**/*`,
+        new CopyPlugin([
+            {
+                from: config.paths.images,
                 flatten: true,
-                dot: false
+                dot: false,
+                to: config.outputs.image.filename,
             },
-            to: config.outputs.image.filename,
-        }]),
+            {
+                from: config.paths.fonts, 
+                to: config.outputs.font.filename, 
+            }
+        ]),
         new BrowserSyncPlugin(
             {
                 host: 'localhost',
